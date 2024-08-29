@@ -1,0 +1,537 @@
+---
+format:
+  revealjs:
+    title-block-style: none
+    slide-number: c
+    title-slide-style: default
+    chalkboard:
+      buttons: false
+    auto-animate: true
+    reference-location: section
+    touch: true
+    pause: false
+    footnotes-hover: true
+    citations-hover: true
+    preview-links: true
+    controls-tutorial: true
+    controls: false
+    history: false
+    theme: [css/dark.scss]
+    callot-style: simple
+    css: [css/default.css, css/callouts.css]
+    self-contained: false
+    embed-resources: false
+    self-contained-math: false
+    center: true
+    highlight-style: "atom-one"
+    default-image-extension: svg
+    code-line-numbers: true
+    code-overflow: scroll
+    html-math-method: katex
+    fig-align: center
+    mermaid:
+      theme: dark
+  gfm:
+    output-file: "README.md"
+---
+
+# {.title-slide .centeredslide background-video="https://web.cels.anl.gov/projects/alcf_vis_internal/HARVEY/sc23_arteries_sunspot_25fps_01.mp4" background-video-loop="true" loading="lazy"}
+
+::: {style="background-color: rgba(22,22,22,0.75); border-radius: 10px; text-align:center; padding: 0px; padding-left: 1.5em; padding-right: 1.5em; max-width: min-content; min-width: max-content; margin-left: auto; margin-right: auto; padding-top: 0.2em; padding-bottom: 0.2em; line-height: 1.5em!important;"}
+<span style="color:#939393; font-size:1.5em; font-weight: bold;">Workshop 1: Introduction to the Randles Lab</span>  
+<span style="color:#777777; font-size:1.2em; font-weight: bold;">Getting started with our different tools</span>  
+[<br>&nbsp;]{style="padding-bottom: 0.5rem;"}  
+[{{< fa solid home >}}](https://aymanzyy.github.io) Ayman Yousef 
+:::
+
+::: footer
+[2024-09-04 @ [Randles Lab Workshop Series](https://randleslab.pratt.duke.edu)]{.dim-text style="text-align:left;'}
+:::
+
+# Overview
+
+1. [Background](#background)
+    - [Why Do We Care](#wecare)
+2. [Documentation](#documentation)
+    - [Wiki](#wiki)
+    - [Box](#box)
+    - [Outlook](#outlook)
+3. [Monday.com](#monday)
+4. [Overleaf](#overleaf)
+5. [Whiteside's](#whitesides)
+
+
+# Background {#background .centeredslide}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+::: {.callout-note title="Goal" style="text-align:left;!important"}
+Get you guys caught up on the different resources available in the lab. 
+:::
+
+- It's **important** to note that the expectation is to keep up with each of these resources.
+
+- <span style="color:#ff8281;">Ex</span>: Monday pages are checked at random and during project meetings
+
+:::
+
+::: {.column width="49%"}
+![](https://images.ctfassets.net/xz1dnu24egyd/3FbNmZRES38q2Sk2EcoT7a/a290dc207a67cf779fc7c2456b177e9f/press-kit-icon.svg){width=25%}
+![](https://images.ctfassets.net/nrgyaltdicpt/lrfSTdfvhXxtaEcldEGV0/6932002ad80fc61ef60c01c7e09c8e79/overleaf-logo-white.svg){width=50%}
+![](https://seeklogo.com/images/C/confluence-logo-D9B07137C2-seeklogo.com.png){width=30%}
+![](https://monday.com/p/wp-content/uploads/2024/03/Logo-1-NO-1.png){width=50%}
+:::
+
+::::
+
+You are not expected to be experts by the end of this, but familiarty with each of these is  <span style="color:#9c90fa;">expected</span>. 
+
+# Why Do We Care {#wecare .centeredslide}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+ - Reproducibility is one of the most important aspets of research
+ - Key tenant of the Randles Lab, you will be involved in multiple projects
+
+::: {.callout-warning title="Warning!"}
+- Your focus will be diverted on a day-to-day basis. Good to make notes for both yourself and fellow lab members
+:::
+
+- Collaboration is a key aspect of our research. Courteous to keep good notes so others can easily replicate your work
+  - <span style="color:#ff8281;">Ex</span>:  Getting hit by a bus
+
+
+:::
+
+::: {.column width="49%"}
+
+- Learning these tools are important in sustaining a collaborative lab environment. 
+  - If we're all comfortable with the same tools, it becomes easier pass of tasks, share work, etc. 
+
+:::
+
+::::
+
+# Documentation {#documentation .centeredslide}
+
+- Wiki (Confluence)
+
+- Box 
+
+- Outlook
+
+# Wiki (Confluence) {#wiki .centeredslide}
+:::: {.columns}
+
+::: {.column width="50%"}
+
+ - Website that houses most of our documentation
+ - Project updates are written here, with everyone in the lab having access to every page
+
+- Structure:
+  - Each project has a "landing page" and a "notebook"
+  - Notebooks contain information regarding the ongoing project it's for
+
+:::
+
+::: {.column width="49%"}
+![](https://i.gyazo.com/66b9f922cf03aa041292ca4012058ac0.pngg){width=90%}
+
+![](https://i.gyazo.com/48c5538a154172f98d505c8877f67df5.png){width=90%}
+:::
+
+::::
+
+## Wiki: Sample Entry {.centeredslide}
+:::: {.columns}
+
+::: {.column width="50%"}
+
+ - Date: 
+    - Can be days when work was performed or when journal entry is recorded
+- Summary: 
+  - Include context for what work you're performing. 
+  - Can be conversational, some of the best notebooks work through 
+  the thinking process that led to a specific run, solution, etc. 
+
+:::
+
+::: {.column width="49%" style="font-size:0.59em;"}
+
+::: {.callout title="Algorithm"}
+
+1. `Date`: 
+
+2. `Goal`: 
+    - Intended purpose of run, should match surrounding Wiki entry
+
+3. `Input File`:
+    - Ideally, link the actual file
+    - If you're lazy, data path
+
+4. `Path to data output`: 
+
+5. `Code Version - git checkout`: 
+    - Link to branch
+    - Write commit hash
+
+6. `Job Submission Parameters`: 
+    - Number of processors
+    - Relevant job parameters
+      - Partition
+      - Node numbers
+      - Flags
+
+7. `Outcome/Post Processing`: 
+    - Link scripts
+    - Explain your workflow
+:::
+
+
+:::
+
+::::
+
+## Wiki: Example Entry {.centeredslide}
+
+![](https://i.gyazo.com/4315a92dce655ed54b035eedf5dc1909.png){height=150%}
+
+# Box {#box .centeredslide}
+:::: {.columns}
+
+::: {.column width="50%"}
+
+ - Website that houses the rest of our documentation
+ - Files to be shared with the lab, Professor Randles are housed here
+    - Group Presentations
+    - Individual meeting files
+    - Milestone documents
+ - Unlimited lab storage but Duke also gives individuals their own allocation of storage
+
+::: {.callout-warning title="Warning!"}
+- DO NOT UPLOAD UNNECESSARY FILES
+:::
+:::
+
+::: {.column width="49%"}
+![](https://upload.wikimedia.org/wikipedia/commons/5/57/Box%2C_Inc._logo.svg){width=75%}
+![](https://i.gyazo.com/22547996db9d716c894e64cc8dcbe815.png){height=150%}
+
+:::
+
+::::
+
+# Outlook {#outlook .centeredslide}
+:::: {.columns}
+
+::: {.column width="50%"}
+
+ - We use Outlook calendar to organize our lab schedule. This includes:
+    - Meetings
+    - Lab Activities
+    - Milestone Events
+    - Time Off
+
+
+
+::: {.callout-important title="Warning" style="text-align:left;"}
+**Professor Randles lives by her calendar. If it's not on her calendar, it's not happening**:
+:::
+:::
+
+::: {.column width="49%"}
+![](https://mailmeteor.com/logos/assets/PNG/Microsoft_Office_Outlook_Logo_256px.png){width=75%}
+:::
+::::
+
+## Outlook Overview {.centeredslide}
+
+![](https://i.gyazo.com/cadbca20725120ffc1d68cb6b99d30b2.png){width=75%}
+
+## Outlook Day-to-Day {.centeredslide}
+
+![](https://i.gyazo.com/cbc94a3f77ad59c3389870a39233c23a.png){width=75%}
+
+# Monday.com {#monday .centeredslide}
+:::: {.columns}
+
+::: {.column width="50%"}
+
+ - Monday.com Ltd. is a cloud-based platform that allows users to create their own applications and project management software. 
+ - It is used to schedule/assign tasks, track project progress, etc. 
+
+::: {.callout-warning title="Warning!"}
+- DO NOT UPLOAD UNNECESSARY FILES
+- DO NOT UPLOAD PATIENT DATA
+:::
+:::
+
+::: {.column width="49%"}
+![](https://thedigitalprojectmanager.com/wp-content/uploads/2021/04/In-depth-review-–-Monday.com-featured-image.png){width=75%}
+
+:::
+::::
+
+## Monday.com: My Work Page {.centeredslide}
+
+![](https://thedigitalprojectmanager.com/wp-content/uploads/2021/04/In-depth-review-–-Monday.com-featured-image.png){width=75%}
+
+## Monday.com: Project Page {.centeredslide}
+
+![](https://thedigitalprojectmanager.com/wp-content/uploads/2021/04/In-depth-review-–-Monday.com-featured-image.png){width=75%}
+
+## Monday.com: Research Subgroup Page {.centeredslide}
+
+![](https://thedigitalprojectmanager.com/wp-content/uploads/2021/04/In-depth-review-–-Monday.com-featured-image.png){width=75%}
+
+
+# Overleaf {#overleaf .centeredslide}
+:::: {.columns}
+
+::: {.column width="50%"}
+
+- Overleaf "is a collaborative cloud-based LaTeX editor used for writing, editing and publishing scientific documents".
+- All papers, outlines, milestone documents, and some of our documentation is written with Overleaf. Easily shareable and great for bookkeeping
+
+::: {.callout-tip title="Learning Overleaf!"}
+- Learning LaTeX while your research expectations are lower is a good idea, trust me
+:::
+:::
+
+::: {.column width="49%"}
+
+<iframe data-src="https://cdn.dribbble.com/users/95028/screenshots/2256537/overleaf-logo2.gif" width="100%" height="800" title="l2hmc-qcd"></iframe>
+
+
+:::
+::::
+
+## Overleaf: LaTeX {.centeredslide}
+:::: {.columns}
+
+- LATEX is a tool for typesetting professional-looking documents
+- LaTeX works very differently: instead of a interactive page to type and edit text with, your document is a plain text file interspersed with LaTeX commands used to express the desired (typeset) results.
+- To produce a visible, typeset document, your LaTeX file is processed by a piece of software called a TeX engine which uses the commands embedded in your text file to guide and control the typesetting process, converting the LaTeX commands and document text into a professionally typeset PDF file
+
+::::
+
+## Overleaf: Writing your first piece of LATEX {.centeredslide}
+
+- Creating a document and writing some text 
+  -
+```
+\documentclass{article}
+\begin{document}
+First document. This is a simple example, with no 
+extra parameters or packages included.
+\end{document}
+```
+  - Will produce the following image 
+    - ![](https://images.ctfassets.net/nrgyaltdicpt/5oBbZABsWEnHZpwhfvV2PD/95ba7d5496616b4f10dffe6fb90f578a/LL30Fig1-plain.svg){width=75%}
+  
+- Not always this easy. Some journals/conferences require specific formats 
+
+
+## Overleaf: Document Pre-amble {.centeredslide}
+:::: {.columns}
+
+::: {.column width="48%"}
+- Everything in your .tex file appearing before \begin document is called the preamble, which acts as the document’s “setup” section.
+
+::: {.callout-tip title="Document Settings"}
+```
+\documentclass[12pt, letterpaper]{article}
+\usepackage{graphicx}
+
+```
+:::
+
+- In this example, we are setting both:
+  - The font size to 12 pt
+  - The paper size to letterpaper
+
+::: 
+::: {.column width="49%"}
+
+
+- Overleaf is compatible with a bunch of different libraries, packages that you can use to your advantage. To do so, you'd want to include something like the following: 
+
+::: {.callout-tip title="Package Import"}
+```
+\usepackage{graphicx}
+
+```
+::: 
+- For more info on what packages are available and their functionality, you can visit the following [page](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes#Finding_and_using_LaTeX_packages) 
+
+
+::: 
+::::
+
+## Overleaf: Including title, author and date information {.centeredslide}
+:::: {.columns}
+
+- Adding a title, author and date to our document requires three more lines in the preamble (not the main body of the document). Those lines are:
+
+::: {.callout-tip title="Author/Date Information"}
+```
+\title{My first LaTeX document}: 
+\author{Hubert Farnsworth}: 
+
+\thanks{Funded by the Overleaf team.}: 
+
+\date{August 2022}: 
+```
+::: 
+
+::::
+
+## Overleaf: Adding comments {.centeredslide}
+:::: {.columns}
+
+To make a comment in LATEX, simply write a % symbol at the beginning of the line, as shown in the following code which uses the example above:
+
+::: {.callout-tip title="Example Comment Line"}
+```
+% This line here is a comment. It will not be typeset in the document.
+
+```
+:::
+
+::::
+
+## Overleaf: Bold, italics and underlining {.centeredslide}
+:::: {.columns}
+
+- **Bold** : bold text in LaTeX is typeset using the \textbf{...} command.
+- *Italics* : italicised text is produced using the \textit{...} command.
+- <ins>Underline</ins>: to underline text use the \underline{...} command.
+
+::: {.callout-tip title="Example Usage Line"}  
+```
+Some of the \textbf{greatest}
+discoveries in \underline{science} 
+were made by \textbf{\textit{accident}}.
+```
+:::
+
+::::
+
+## Overleaf: Adding Images {.centeredslide}
+:::: {.columns}
+
+Overleaf supports three ways to insert images:
+
+::: {.column width="49%"}
+
+
+- Use the Insert Figure button, located on the editor toolbar, to insert an image into Visual Editor or Code Editor.
+- Copy and paste an image into Visual Editor or Code Editor.
+- Use Code Editor to write LaTeX code that inserts a graphic.
+​
+:::
+
+::: {.column width="49%"}
+
+::: {.callout-tip title="Example of Image Inclusion"}  
+
+```
+\documentclass{article}
+\usepackage{graphicx} %LaTeX package to import graphics
+\graphicspath{{images/}} %configuring the graphicx package
+ 
+\begin{document}
+The universe is immense and it seems to be homogeneous, 
+on a large scale, everywhere we look.
+
+% The \includegraphcs command is 
+% provided (implemented) by the 
+% graphicx package
+\includegraphics{universe}  
+ 
+There's a picture of a galaxy above.
+\end{document}
+```
+:::
+:::
+::::
+
+## {auto-animate="true"}
+
+```r
+\documentclass{article}
+\usepackage{graphicx} %LaTeX package to import graphics
+\graphicspath{{images/}} %configuring the graphicx package
+
+```
+
+## {auto-animate=true}
+
+```r
+\documentclass{article}
+\usepackage{graphicx} %LaTeX package to import graphics
+\graphicspath{{images/}} %configuring the graphicx package
+ 
+\begin{document}
+The universe is immense and it seems to be homogeneous, 
+on a large scale, everywhere we look.
+
+```
+
+## Overleaf: Captions, labels, references {.centeredslide}
+:::: {.columns}
+```
+\documentclass{article}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+ 
+\begin{document}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.75\textwidth]{mesh}
+    \caption{A nice plot.}
+    \label{fig:mesh1}
+\end{figure}
+ 
+As you can see in figure \ref{fig:mesh1}, the function grows near the origin. This example is on page \pageref{fig:mesh1}.
+
+\end{document}
+```
+::::
+## Overleaf: Link Sharing {.centeredslide}
+
+<iframe data-src="https://images.contentful.com/nrgyaltdicpt/20neyIS8962IgXcQH6beDo/2dd30bbb1ca0325a55fecb93666aa98d/ProjectSharing.gif" width="90%" height="500" title="l2hmc-qcd"></iframe>
+
+## Overleaf: More to Learn {.centeredslide}
+:::: {.columns}
+
+::::
+
+
+# Whiteside's Outline {.centeredslide}
+:::: {.columns}
+
+::: {.column width="50%"}
+
+- Based on a paper by Harvard Professor/American chemist George Whiteside
+- Idea behind his work on papers was that "it is most efficient to write papers from outlines"
+
+:::
+
+::: {.column width="49%"}
+![](https://media.sciencephoto.com/image/c0068504/800wm){width=75%}
+
+
+:::
+::::
+
+## Whiteside's Outline: Overview {.centeredslide}
+:::: {.columns}
+- I'm not teaching you this, you gotta look through the documentation in the Randles Lab Documentation thingy
+::::
+
