@@ -1,7 +1,28 @@
 [
   {
-    "objectID": "index.html#types-of-visualization",
-    "href": "index.html#types-of-visualization",
+    "objectID": "index.html#discovery",
+    "href": "index.html#discovery",
+    "title": "Workshop Series, Randles Lab",
+    "section": "Discovery",
+    "text": "Discovery"
+  },
+  {
+    "objectID": "index.html#dessi",
+    "href": "index.html#dessi",
+    "title": "Workshop Series, Randles Lab",
+    "section": "Dessimination",
+    "text": "Dessimination"
+  },
+  {
+    "objectID": "index.html#debugging",
+    "href": "index.html#debugging",
+    "title": "Workshop Series, Randles Lab",
+    "section": "Debugging",
+    "text": "Debugging"
+  },
+  {
+    "objectID": "index.html#documentation",
+    "href": "index.html#documentation",
     "title": "Workshop Series, Randles Lab",
     "section": "Types of Visualization",
     "text": "Types of Visualization\n\n\n\n\nPost Hoc Visualization\n\nSave data to disk/storage\nLoaded in to visualization API\nSave images, plots to disk\n\nIn Situ\n\nData remains in memory\nData is passed to visualization API\nSave images, plots to disk\n\nNotebook visualization\n\nLoad data in to Jupyter notebook\nUtilize vis modules\n\nMatplotlib\nEtc."
@@ -46,7 +67,7 @@
     "href": "index.html#properties-browser",
     "title": "Workshop Series, Randles Lab",
     "section": "Properties Browser",
-    "text": "Properties Browser\n\n\n\nEach object has its own properties that can be updated\nThe editable properties depend on the object type but a few of the standard ones include:\n\nRepresentation\n\nPoints\nSurface\nVolume\n\nColoring\n\nParameter to Color BY\nColor Bar\n\nStyling/Lighting\n\nOpacity\nSpecular\n\nBackground"
+    "text": "Properties Browser\n\n\n\nEach object has its own properties that can be updated\nThe editable properties depend on the object type but a few of the standard ones include:\n\nRepresentation\n\nPoints\nSurface\nVolume\n\nColoring\n\nParameter to Color By\nColor Bar\n\nStyling/Lighting\n\nOpacity\nSpecular\n\nBackground"
   },
   {
     "objectID": "index.html#camera-controls",
@@ -60,21 +81,21 @@
     "href": "index.html#some-smaller-things",
     "title": "Workshop Series, Randles Lab",
     "section": "Some Smaller Things",
-    "text": "Some Smaller Things\n\n\nAuto Apply, I recommend having it on\nThe color bar is highly configurable, explore with different color maps"
+    "text": "Some Smaller Things\n\n\nAuto Apply, I recommend having it on\nThe color bar is highly configurable, explore with different color maps\nMultiView is useful when wanting to compare two different datasets\n\n\n\nThere’s more in the ParaView guide published online"
   },
   {
     "objectID": "index.html#clipslice",
     "href": "index.html#clipslice",
     "title": "Workshop Series, Randles Lab",
     "section": "Clip/Slice",
-    "text": "Clip/Slice\n\n\n\nClip is used to extract a portion of an object defined by a plane/shape\n\nEx: Remove left-hand portion of a cube\nEx: Remove all elements to the right of a plane in order to see what’s “inside”\n\nSlice is used to extract a specific plane\n\nEx: Extract fluid fields at the centerline/axial position to inform of hemodynamic metrics there\nEx: 2D Flow Field Contouring\n\n\n\n Video"
+    "text": "Clip/Slice\n\n\n\nClip is used to extract a portion of an object defined by a plane/shape\n\nEx: Remove left-hand portion of a cube\nEx: Remove all elements to the right of a plane in order to see what’s “inside”\n\nSlice is used to extract a specific plane\n\nEx: Extract fluid fields at the centerline/axial position to inform of hemodynamic metrics there\nEx: 2D Flow Field Contouring"
   },
   {
     "objectID": "index.html#threshold",
     "href": "index.html#threshold",
     "title": "Workshop Series, Randles Lab",
     "section": "Threshold",
-    "text": "Threshold\n\n\n\n\n\n\n\n\n  \n\n\n\n\n\nThresholding is used to extract specific cells that fall within a predefined range\n\nEx: Remove all xlet points\nEx: Remove all cells of a specific ID\n\nHighly configurable and criminally underutilized\nBelieve you can only threshold based on “Cell Data”"
+    "text": "Threshold\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\n\n\nThresholding is used to extract specific cells that fall within a predefined range\n\nEx: Remove all xlet points\nEx: Remove all cells of a specific ID\n\nHighly configurable and criminally underutilized\nBelieve you can only threshold based on “Cell Data”"
   },
   {
     "objectID": "index.html#glyph",
@@ -103,13 +124,6 @@
     "title": "Workshop Series, Randles Lab",
     "section": "Stream Tracer Cont. 2",
     "text": "Stream Tracer Cont. 2"
-  },
-  {
-    "objectID": "index.html#how-do-we-use-filters",
-    "href": "index.html#how-do-we-use-filters",
-    "title": "Workshop Series, Randles Lab",
-    "section": "How Do We Use Filters?",
-    "text": "How Do We Use Filters?\n\n\n\nLet’s try using a couple of filters with a provided example dataset. Make sure you’ve downloaded cube_ex.tar and unzip it\nWe’ll start off with creating:\n\nClipping the cube\nThresholding out all non-fluid points\nCreating a stream line visualization\nCreate glyphs based on the streamline"
   },
   {
     "objectID": "index.html#load-the-dataset-in",
@@ -235,7 +249,7 @@
     "href": "index.html#paraview-python-scripting",
     "title": "Workshop Series, Randles Lab",
     "section": "ParaView Python Scripting",
-    "text": "ParaView Python Scripting\n\npvPython\npvBatch"
+    "text": "ParaView Python Scripting\n\npvPython is “the Python intreface to ParaView. You can think of PvPython as ParaView with a Python interface.”\npvBatch is basically pvPython that can be launched in parallel and doesn’t contain/interface with a GUI"
   },
   {
     "objectID": "index.html#ascentsensei",

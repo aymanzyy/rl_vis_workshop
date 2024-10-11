@@ -52,13 +52,13 @@ format:
 # Overview
 
 1. [Background](#background)
-    - [What's Out There](#wecare)
-2. [Types of Visualization](#documentation)
-    - [Post Hoc](#wiki)
-    - [In Situ](#box)
-    - [Python-based](#outlook)
-3. [ParaView Overview](#overview)
-4. [ParaView Usage](#usage)
+    - [Discovery](#discovery)
+    - [Dissemination](#dessi)
+    - [Debugging](#debugging)
+2. [What's Out There](#wecare)
+    - [Types of Visualization](#documentation)
+3. [ParaView Overview](#paroverview)
+4. [ParaView Usage](#parusage)
 5. [ParaView Filters](#filters)
 6. [ParaView Walkthrough](#walkthrough)
 7. [ParaView Animations](#animations)
@@ -87,18 +87,20 @@ Visualization is often passed off as a less important tool in your arsenal, but 
 ::::
 
 
-# Discovery {#discovery .centeredslide}
+## Discovery {#discovery .centeredslide}
 ::: {.fragment .fade-in-then-out-out}
 ![](assets/in_the_thick_of_it_blue_orange_inverted copy.jpeg){width=90%}
 :::
-# Dessimination {#dessi .centeredslide}
+## Dessimination {#dessi .centeredslide}
 ::: {.fragment .fade-in-then-out-out}
 ![](assets/split_up_geom_copy.jpg){width=90%}
 :::
-# Debugging {#debugging .centeredslide}
+## Debugging {#debugging .centeredslide}
 ::: {.fragment .fade-in-then-out-out}
 ![](assets/wtf.jpg){width=90%}
 :::
+
+
 # What's Out There? {#wecare .centeredslide}
 
 :::: {.columns}
@@ -128,28 +130,29 @@ Visualization is often passed off as a less important tool in your arsenal, but 
 
 ::::
 
-## Types of Visualization { .centeredslide}
+## Types of Visualization {#documentation .centeredslide}
 :::: {.columns}
 
 ::: {.column width="50%"}
 
 ::: {.fragment .fade-in-then-out-out}
-- Post Hoc Visualization
+- **Post Hoc Visualization** 
   - Save data to disk/storage
   - Loaded in to visualization API
   - Save images, plots to disk
 
-- In Situ
+- **In Situ**
   - Data remains in memory
   - Data is passed to visualization API
   - Save images, plots to disk
 
-- Notebook visualization
+- **Notebook visualization**
   - Load data in to Jupyter notebook
   - Utilize vis modules
     - Matplotlib
     - Etc. 
 :::
+
 :::
 
 
@@ -162,7 +165,8 @@ Visualization is often passed off as a less important tool in your arsenal, but 
 
 :::
 ::::
-# ParaView (Kitware) {#paraview .centeredslide}
+
+# ParaView (Kitware) {#paroverview .centeredslide}
 :::: {.columns}
 
 ::: {.column width="50%"}
@@ -190,17 +194,17 @@ Visualization is often passed off as a less important tool in your arsenal, but 
 
 ::: {.column width="50%"}
 
-- On the Desktop: 
+- **On the Desktop**: 
   - Post hoc analysis
   - Most common method
   - Best for small scale data
-- On the Web:
+- **On the Web**:
   - Trame
   - VTK.js
   - ParaView Glance/Visualizer/Lite
-- Remote Work: 
+- **Remote Work**: 
   - Remotely connect to servers
-  - Ex: Polaris, Cooley
+  - **<span style="color:#4e518b;">Ex:</span>** Polaris, Cooley
 
 :::
 ::: {.column width="49%" style="font-size:0.59em;"}
@@ -224,7 +228,8 @@ Visualization is often passed off as a less important tool in your arsenal, but 
 
 ![](https://i.gyazo.com/c898a380aaa5605ba78733fb42ab8f18.jpg){width=90%}
 
-# ParaView Usage {#usage .centeredslide}
+
+# ParaView Usage {#parusage .centeredslide}
 :::: {.columns}
 
 Let's go through the basics
@@ -247,7 +252,7 @@ Let's go through the basics
 ## Pipeline Browser {.centeredslide}
 :::: {.columns}
 ::: {.column width="49%"}
-![](https://gyazo.com/e088acc56246b525fba02c8cbf17451c)
+![](https://gyazo.com/e088acc56246b525fba02c8cbf17451c){width=110%}
 :::
 
 ::: {.column width="49%"}
@@ -270,17 +275,17 @@ Let's go through the basics
 ::: {.column width="50%"}
 - Each object has its own properties that can be updated
 - The editable properties depend on the object type but a few of the standard ones include: 
-  - Representation
+  - <span style="color:#ff8281;">Representation</span> 
     - Points
     - Surface
     - Volume
-  - Coloring
-    - Parameter to Color BY
+  - <span style="color:#7b5e7b;">Coloring</span>  
+    - Parameter to Color By
     - Color Bar 
-  - Styling/Lighting
+  - <span style="color:#7678ed;">Styling/Lighting</span> 
     - Opacity
     - Specular
-  - Background
+  - <span style="color:#9c90fa;">Background</span>
 :::
 
 ::: {.column width="49%"}
@@ -312,9 +317,13 @@ Let's go through the basics
 
 - Auto Apply, I recommend having it on
 - The color bar is highly configurable, explore with different color maps
-- 
-
+- MultiView is useful when wanting to compare two different datasets 
 ::::
+
+
+::: {.fragment .fade-in-then-out-out}
+**There's more in the ParaView guide published online**
+:::
 
 # ParaView: Filters {#filters .centeredslide}
 :::: {.columns}
@@ -342,18 +351,18 @@ Let's go through the basics
 :::: {.columns}
 
 ::: {.column width="50%"}
-- Clip is used to extract a portion of an object defined by a plane/shape
-  - Ex: Remove left-hand portion of a cube 
-  - Ex: Remove all elements to the right of a plane in order to see what's "inside"
+- **Clip** is used to extract a portion of an object defined by a plane/shape
+  - **<span style="color:#4e518b;">Ex:</span>** Remove left-hand portion of a cube 
+  - **<span style="color:#4e518b;">Ex:</span>** Remove all elements to the right of a plane in order to see what's "inside"
 
-- Slice is used to extract a specific plane
-  - Ex: Extract fluid fields at the centerline/axial position to inform of hemodynamic metrics there
-  - Ex: 2D Flow Field Contouring 
+- **Slice** is used to extract a specific plane
+  - **<span style="color:#4e518b;">Ex:</span>** Extract fluid fields at the centerline/axial position to inform of hemodynamic metrics there
+  - **<span style="color:#4e518b;">Ex:</span>** 2D Flow Field Contouring 
 :::
 
 ::: {.column width="49%"}
+![](assets/mbt_animation_for_tutorial_slower_magma.gif)
 ![](assets/clip_sphere_4k_0.png)
-![](assets/test_longer_mbt_ani.avi)
 :::
 
 ::::
@@ -363,17 +372,18 @@ Let's go through the basics
 
 ::: {.column width="50%"}
 
+::: {.fragment .fade-in-then-out-out}
 ::: {layout-nrow=2}
 ![Full Cube](https://i.gyazo.com/fd200dd8627dfc023a6b05a86d97e5a7.png){width=40%}
 ![Fluid Points Only](https://gyazo.com/b1e7462bd23dd09fa2d90af499c46965){width=42%}
 ![Inlet Points Only](https://gyazo.com/b549732bc1d559af866b41a1721d8c09){width=50%}
 :::
-
+:::
 :::
 ::: {.column width="50%"}
 - Thresholding is used to extract specific cells that fall within a predefined range
-  - Ex: Remove all xlet points
-  - Ex: Remove all cells of a specific ID
+  - **<span style="color:#4e518b;">Ex:</span>** Remove all xlet points
+  - **<span style="color:#4e518b;">Ex:</span>** Remove all cells of a specific ID
 - Highly configurable and criminally underutilized
 - Believe you can only threshold based on "Cell Data"
 :::
@@ -388,14 +398,17 @@ Let's go through the basics
   - The glyphs may be oriented by a vector and scaled by a vector or scalar.
   - Useful for both visualization and analysis purposes
 - Preferrable when working with cell and fluid data 
-  - Ex: Wendy visualizing fluid flow around a cell
-  - Ex: Chris visualizing fluid flow around a bifurcation
+  - **<span style="color:#4e518b;">Ex:</span>** Wendy visualizing fluid flow around a cell
+  - **<span style="color:#4e518b;">Ex:</span>** Chris visualizing fluid flow around a bifurcation
 :::
 
 ::: {.column width="49%"}
+
+::: {.fragment .fade-in-then-out-out}
 ![](https://gyazo.com/dca88a4c8078f40918644f4e75034896)
 :::
 
+:::
 ::::
 
 
@@ -420,7 +433,7 @@ Let's go through the basics
 ::::
 
 
-## How Do We Use Filters? {.centeredslide}
+# How Do We Use Filters? {#walkthrough .centeredslide}
 ::::{.columns}
 
 ::: {.column width="50%"}
@@ -527,7 +540,7 @@ I'll let you guys struggle with this one a little bit. I want you guys to get to
 
 You guessed it, I want you to struggle a bit more. Now add a Glpyh filter. Once you are done, you should get to a visualization similar to what I have above
 
-# ParaView Animations {.centeredslide}
+# ParaView Animations {#animations .centeredslide}
 
 ![](assets/mbt_animation_for_tutorial_slower_magma.gif)
 
@@ -540,7 +553,7 @@ You guessed it, I want you to struggle a bit more. Now add a Glpyh filter. Once 
 :::
 
 ::: {.column width="50%"}
-![](https://gyazo.com/e67ef5964cf8d76ce6fe797e59149579)
+![](https://gyazo.com/e67ef5964cf8d76ce6fe797e59149579){width=60%}
 :::
 ## Animation View {.centeredslide}
 
@@ -585,8 +598,8 @@ You guessed it, I want you to struggle a bit more. Now add a Glpyh filter. Once 
 
 ## ParaView Python Scripting {.centeredslide}
 
-- pvPython
-- pvBatch
+- pvPython is "the Python intreface to ParaView. You can think of PvPython as ParaView with a Python interface."
+- pvBatch is basically pvPython that can be launched in parallel and doesn't contain/interface with a GUI
 
 ## Ascent/SENSEI {.centeredslide}
 
