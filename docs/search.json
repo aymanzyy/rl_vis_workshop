@@ -1,142 +1,268 @@
 [
   {
-    "objectID": "index.html#wiki-sample-entry",
-    "href": "index.html#wiki-sample-entry",
-    "title": "Ayman’s Test Presentation",
-    "section": "Wiki: Sample Entry",
-    "text": "Wiki: Sample Entry\n\n\n\nDate:\n\nCan be days when work was performed or when journal entry is recorded\n\nSummary:\n\nInclude context for what work you’re performing.\nCan be conversational, some of the best notebooks work through the thinking process that led to a specific run, solution, etc.\n\n\n\n\n\n\n\nAlgorithm\n\n\n\nDate:\nGoal:\n\nIntended purpose of run, should match surrounding Wiki entry\n\nInput File:\n\nIdeally, link the actual file\nIf you’re lazy, data path\n\nPath to data output:\nCode Version - git checkout:\n\nLink to branch\nWrite commit hash\n\nJob Submission Parameters:\n\nNumber of processors\nRelevant job parameters\n\nPartition\nNode numbers\nFlags\n\n\nOutcome/Post Processing:\n\nLink scripts\nExplain your workflow"
+    "objectID": "index.html#types-of-visualization",
+    "href": "index.html#types-of-visualization",
+    "title": "Workshop Series, Randles Lab",
+    "section": "Types of Visualization",
+    "text": "Types of Visualization\n\n\n\n\nPost Hoc Visualization\n\nSave data to disk/storage\nLoaded in to visualization API\nSave images, plots to disk\n\nIn Situ\n\nData remains in memory\nData is passed to visualization API\nSave images, plots to disk\n\nNotebook visualization\n\nLoad data in to Jupyter notebook\nUtilize vis modules\n\nMatplotlib\nEtc."
   },
   {
-    "objectID": "index.html#wiki-example-entry",
-    "href": "index.html#wiki-example-entry",
-    "title": "Ayman’s Test Presentation",
-    "section": "Wiki: Example Entry",
-    "text": "Wiki: Example Entry"
+    "objectID": "index.html#paraview---portability",
+    "href": "index.html#paraview---portability",
+    "title": "Workshop Series, Randles Lab",
+    "section": "ParaView - Portability",
+    "text": "ParaView - Portability\n\n\n\nOn the Desktop:\n\nPost hoc analysis\nMost common method\nBest for small scale data\n\nOn the Web:\n\nTrame\nVTK.js\nParaView Glance/Visualizer/Lite\n\nRemote Work:\n\nRemotely connect to servers\nEx: Polaris, Cooley"
   },
   {
-    "objectID": "index.html#outlook-overview",
-    "href": "index.html#outlook-overview",
-    "title": "Ayman’s Test Presentation",
-    "section": "Outlook Overview",
-    "text": "Outlook Overview"
+    "objectID": "index.html#paraview---building-blocks",
+    "href": "index.html#paraview---building-blocks",
+    "title": "Workshop Series, Randles Lab",
+    "section": "ParaView - Building Blocks",
+    "text": "ParaView - Building Blocks\n\nParaView utilizes the VTK (the Visualization Toolkit) model as its backbone for data representation\nData is transformed through algorithms, present in ParaView as Filters & Sinks (not common)"
   },
   {
-    "objectID": "index.html#outlook-day-to-day",
-    "href": "index.html#outlook-day-to-day",
-    "title": "Ayman’s Test Presentation",
-    "section": "Outlook Day-to-Day",
-    "text": "Outlook Day-to-Day"
+    "objectID": "index.html#paraview---vtk-data-model",
+    "href": "index.html#paraview---vtk-data-model",
+    "title": "Workshop Series, Randles Lab",
+    "section": "ParaView - VTK Data Model",
+    "text": "ParaView - VTK Data Model"
   },
   {
-    "objectID": "index.html#monday.com-my-work-page",
-    "href": "index.html#monday.com-my-work-page",
-    "title": "Ayman’s Test Presentation",
-    "section": "Monday.com: My Work Page",
-    "text": "Monday.com: My Work Page"
+    "objectID": "index.html#toolbar",
+    "href": "index.html#toolbar",
+    "title": "Workshop Series, Randles Lab",
+    "section": "Toolbar",
+    "text": "Toolbar\n\n\nHouses icons for most of the tools, filters, features etc. that users use\nSome of the most frequently used are:\n\nReset Session\nImport File/Open\nToggle Color Bar\n\nAlternatively, you can also just find all of these by moving your mouse to the top of your computer and scrolling through"
   },
   {
-    "objectID": "index.html#monday.com-project-page",
-    "href": "index.html#monday.com-project-page",
-    "title": "Ayman’s Test Presentation",
-    "section": "Monday.com: Project Page",
-    "text": "Monday.com: Project Page"
+    "objectID": "index.html#pipeline-browser",
+    "href": "index.html#pipeline-browser",
+    "title": "Workshop Series, Randles Lab",
+    "section": "Pipeline Browser",
+    "text": "Pipeline Browser\n\n\n\n\n\nParaView handles different objects and filters via a pipeline.\nPipelines allow users to build off existing objects and filters to continuously create new ones\nThings shown in the pipeline browser include:\n\nSources (Data)\nFilters (Data Manipulation)\nReaders\nExtractors\n\nThe pipeline browser indiciates data objects and their individual structures/pipelines\n\nFilters are formatted with an indentation to mark they are of a pipeline"
   },
   {
-    "objectID": "index.html#monday.com-research-subgroup-page",
-    "href": "index.html#monday.com-research-subgroup-page",
-    "title": "Ayman’s Test Presentation",
-    "section": "Monday.com: Research Subgroup Page",
-    "text": "Monday.com: Research Subgroup Page"
+    "objectID": "index.html#properties-browser",
+    "href": "index.html#properties-browser",
+    "title": "Workshop Series, Randles Lab",
+    "section": "Properties Browser",
+    "text": "Properties Browser\n\n\n\nEach object has its own properties that can be updated\nThe editable properties depend on the object type but a few of the standard ones include:\n\nRepresentation\n\nPoints\nSurface\nVolume\n\nColoring\n\nParameter to Color BY\nColor Bar\n\nStyling/Lighting\n\nOpacity\nSpecular\n\nBackground"
   },
   {
-    "objectID": "index.html#overleaf-latex",
-    "href": "index.html#overleaf-latex",
-    "title": "Ayman’s Test Presentation",
-    "section": "Overleaf: LaTeX",
-    "text": "Overleaf: LaTeX\n\n\nLATEX is a tool for typesetting professional-looking documents\nLaTeX works very differently: instead of a interactive page to type and edit text with, your document is a plain text file interspersed with LaTeX commands used to express the desired (typeset) results.\nTo produce a visible, typeset document, your LaTeX file is processed by a piece of software called a TeX engine which uses the commands embedded in your text file to guide and control the typesetting process, converting the LaTeX commands and document text into a professionally typeset PDF file"
+    "objectID": "index.html#camera-controls",
+    "href": "index.html#camera-controls",
+    "title": "Workshop Series, Randles Lab",
+    "section": "Camera Controls",
+    "text": "Camera Controls\n\n\nTo interact with an object, you can use the camera controls\nControls include:\n\nZoom To Box\nSet View Direction To (+X,+Y,+Z) and (-X, -Y, -Z)\nRotate Clockwise and Counterclockwise\nZoom to Data\nReset"
   },
   {
-    "objectID": "index.html#overleaf-writing-your-first-piece-of-latex",
-    "href": "index.html#overleaf-writing-your-first-piece-of-latex",
-    "title": "Ayman’s Test Presentation",
-    "section": "Overleaf: Writing your first piece of LATEX",
-    "text": "Overleaf: Writing your first piece of LATEX\n\nCreating a document and writing some text\n\\documentclass{article}\n\\begin{document}\nFirst document. This is a simple example, with no \nextra parameters or packages included.\n\\end{document}\n\nWill produce the following image\n\n\n\n\nNot always this easy. Some journals/conferences require specific formats"
+    "objectID": "index.html#some-smaller-things",
+    "href": "index.html#some-smaller-things",
+    "title": "Workshop Series, Randles Lab",
+    "section": "Some Smaller Things",
+    "text": "Some Smaller Things\n\n\nAuto Apply, I recommend having it on\nThe color bar is highly configurable, explore with different color maps"
   },
   {
-    "objectID": "index.html#overleaf-document-pre-amble",
-    "href": "index.html#overleaf-document-pre-amble",
-    "title": "Ayman’s Test Presentation",
-    "section": "Overleaf: Document Pre-amble",
-    "text": "Overleaf: Document Pre-amble\n\n\n\nEverything in your .tex file appearing before \\begin document is called the preamble, which acts as the document’s “setup” section.\n\n\n\n\n\n\n\n\nDocument Settings\n\n\n\\documentclass[12pt, letterpaper]{article}\n\\usepackage{graphicx}\n\n\n\n\n\n\nIn this example, we are setting both:\n\nThe font size to 12 pt\nThe paper size to letterpaper\n\n\n\n\nOverleaf is compatible with a bunch of different libraries, packages that you can use to your advantage. To do so, you’d want to include something like the following:\n\n\n\n\n\n\n\n\nPackage Import\n\n\n\\usepackage{graphicx}\n\n\n\n\n\n\nFor more info on what packages are available and their functionality, you can visit the following page"
+    "objectID": "index.html#clipslice",
+    "href": "index.html#clipslice",
+    "title": "Workshop Series, Randles Lab",
+    "section": "Clip/Slice",
+    "text": "Clip/Slice\n\n\n\nClip is used to extract a portion of an object defined by a plane/shape\n\nEx: Remove left-hand portion of a cube\nEx: Remove all elements to the right of a plane in order to see what’s “inside”\n\nSlice is used to extract a specific plane\n\nEx: Extract fluid fields at the centerline/axial position to inform of hemodynamic metrics there\nEx: 2D Flow Field Contouring\n\n\n\n Video"
   },
   {
-    "objectID": "index.html#overleaf-including-title-author-and-date-information",
-    "href": "index.html#overleaf-including-title-author-and-date-information",
-    "title": "Ayman’s Test Presentation",
-    "section": "Overleaf: Including title, author and date information",
-    "text": "Overleaf: Including title, author and date information\n\n\nAdding a title, author and date to our document requires three more lines in the preamble (not the main body of the document). Those lines are:\n\n\n\n\n\n\n\nAuthor/Date Information\n\n\n\\title{My first LaTeX document}: \n\\author{Hubert Farnsworth}: \n\n\\thanks{Funded by the Overleaf team.}: \n\n\\date{August 2022}:"
+    "objectID": "index.html#threshold",
+    "href": "index.html#threshold",
+    "title": "Workshop Series, Randles Lab",
+    "section": "Threshold",
+    "text": "Threshold\n\n\n\n\n\n\n\n\n  \n\n\n\n\n\nThresholding is used to extract specific cells that fall within a predefined range\n\nEx: Remove all xlet points\nEx: Remove all cells of a specific ID\n\nHighly configurable and criminally underutilized\nBelieve you can only threshold based on “Cell Data”"
   },
   {
-    "objectID": "index.html#overleaf-adding-comments",
-    "href": "index.html#overleaf-adding-comments",
-    "title": "Ayman’s Test Presentation",
-    "section": "Overleaf: Adding comments",
-    "text": "Overleaf: Adding comments\n\nTo make a comment in LATEX, simply write a % symbol at the beginning of the line, as shown in the following code which uses the example above:\n\n\n\n\n\n\nExample Comment Line\n\n\n% This line here is a comment. It will not be typeset in the document."
+    "objectID": "index.html#glyph",
+    "href": "index.html#glyph",
+    "title": "Workshop Series, Randles Lab",
+    "section": "Glyph",
+    "text": "Glyph\n\n\n\nGlyph is used to replace point data with a predefined shape or glpyh.\n\nThe glyphs may be oriented by a vector and scaled by a vector or scalar.\nUseful for both visualization and analysis purposes\n\nPreferrable when working with cell and fluid data\n\nEx: Wendy visualizing fluid flow around a cell\nEx: Chris visualizing fluid flow around a bifurcation"
   },
   {
-    "objectID": "index.html#overleaf-bold-italics-and-underlining",
-    "href": "index.html#overleaf-bold-italics-and-underlining",
-    "title": "Ayman’s Test Presentation",
-    "section": "Overleaf: Bold, italics and underlining",
-    "text": "Overleaf: Bold, italics and underlining\n\n\nBold : bold text in LaTeX is typeset using the command.\nItalics : italicised text is produced using the command.\n\nUnderline\n\n: to underline text use the command.\n\n\n\n\n\n\n\nExample Usage Line\n\n\nSome of the \\textbf{greatest}\ndiscoveries in \\underline{science} \nwere made by \\textbf{\\textit{accident}}."
+    "objectID": "index.html#stream-tracer",
+    "href": "index.html#stream-tracer",
+    "title": "Workshop Series, Randles Lab",
+    "section": "Stream Tracer",
+    "text": "Stream Tracer\n\n\nMy favorite of all the filters, stream tracer takes point data and converts it\nStream Tracer seeds a vector field with points and then traces those seed points through the vector field\nThe seeded points are configurable by either a line or a sphere with different resolutions (aka number of seeds) allowable\nAgain, very useful when working with both fluid and fluid + cell data"
   },
   {
-    "objectID": "index.html#overleaf-adding-images",
-    "href": "index.html#overleaf-adding-images",
-    "title": "Ayman’s Test Presentation",
-    "section": "Overleaf: Adding Images",
-    "text": "Overleaf: Adding Images\n\nOverleaf supports three ways to insert images:\n\nUse the Insert Figure button, located on the editor toolbar, to insert an image into Visual Editor or Code Editor.\nCopy and paste an image into Visual Editor or Code Editor.\nUse Code Editor to write LaTeX code that inserts a graphic. ​\n\n\n\n\n\n\n\n\n\nExample of Image Inclusion\n\n\n\\documentclass{article}\n\\usepackage{graphicx} %LaTeX package to import graphics\n\\graphicspath{{images/}} %configuring the graphicx package\n \n\\begin{document}\nThe universe is immense and it seems to be homogeneous, \non a large scale, everywhere we look.\n\n% The \\includegraphcs command is \n% provided (implemented) by the \n% graphicx package\n\\includegraphics{universe}  \n \nThere's a picture of a galaxy above.\n\\end{document}"
+    "objectID": "index.html#stream-tracer-cont.",
+    "href": "index.html#stream-tracer-cont.",
+    "title": "Workshop Series, Randles Lab",
+    "section": "Stream Tracer Cont.",
+    "text": "Stream Tracer Cont."
   },
   {
-    "objectID": "index.html#section-1",
-    "href": "index.html#section-1",
-    "title": "Ayman’s Test Presentation",
-    "section": "",
-    "text": "\\documentclass{article}\n\\usepackage{graphicx} %LaTeX package to import graphics\n\\graphicspath{{images/}} %configuring the graphicx package"
+    "objectID": "index.html#stream-tracer-cont.-2",
+    "href": "index.html#stream-tracer-cont.-2",
+    "title": "Workshop Series, Randles Lab",
+    "section": "Stream Tracer Cont. 2",
+    "text": "Stream Tracer Cont. 2"
   },
   {
-    "objectID": "index.html#section-2",
-    "href": "index.html#section-2",
-    "title": "Ayman’s Test Presentation",
-    "section": "",
-    "text": "\\documentclass{article}\n\\usepackage{graphicx} %LaTeX package to import graphics\n\\graphicspath{{images/}} %configuring the graphicx package\n \n\\begin{document}\nThe universe is immense and it seems to be homogeneous, \non a large scale, everywhere we look."
+    "objectID": "index.html#how-do-we-use-filters",
+    "href": "index.html#how-do-we-use-filters",
+    "title": "Workshop Series, Randles Lab",
+    "section": "How Do We Use Filters?",
+    "text": "How Do We Use Filters?\n\n\n\nLet’s try using a couple of filters with a provided example dataset. Make sure you’ve downloaded cube_ex.tar and unzip it\nWe’ll start off with creating:\n\nClipping the cube\nThresholding out all non-fluid points\nCreating a stream line visualization\nCreate glyphs based on the streamline"
   },
   {
-    "objectID": "index.html#overleaf-captions-labels-references",
-    "href": "index.html#overleaf-captions-labels-references",
-    "title": "Ayman’s Test Presentation",
-    "section": "Overleaf: Captions, labels, references",
-    "text": "Overleaf: Captions, labels, references\n\n\\documentclass{article}\n\\usepackage{graphicx}\n\\graphicspath{{images/}}\n \n\\begin{document}\n\n\\begin{figure}[h]\n    \\centering\n    \\includegraphics[width=0.75\\textwidth]{mesh}\n    \\caption{A nice plot.}\n    \\label{fig:mesh1}\n\\end{figure}\n \nAs you can see in figure \\ref{fig:mesh1}, the function grows near the origin. This example is on page \\pageref{fig:mesh1}.\n\n\\end{document}"
+    "objectID": "index.html#load-the-dataset-in",
+    "href": "index.html#load-the-dataset-in",
+    "title": "Workshop Series, Randles Lab",
+    "section": "Load The Dataset In",
+    "text": "Load The Dataset In"
   },
   {
-    "objectID": "index.html#overleaf-link-sharing",
-    "href": "index.html#overleaf-link-sharing",
-    "title": "Ayman’s Test Presentation",
-    "section": "Overleaf: Link Sharing",
-    "text": "Overleaf: Link Sharing"
+    "objectID": "index.html#add-a-clip-filter",
+    "href": "index.html#add-a-clip-filter",
+    "title": "Workshop Series, Randles Lab",
+    "section": "Add a Clip Filter",
+    "text": "Add a Clip Filter"
   },
   {
-    "objectID": "index.html#overleaf-more-to-learn",
-    "href": "index.html#overleaf-more-to-learn",
-    "title": "Ayman’s Test Presentation",
-    "section": "Overleaf: More to Learn",
-    "text": "Overleaf: More to Learn"
+    "objectID": "index.html#add-a-clip-filter-cont.",
+    "href": "index.html#add-a-clip-filter-cont.",
+    "title": "Workshop Series, Randles Lab",
+    "section": "Add a Clip Filter Cont.",
+    "text": "Add a Clip Filter Cont."
   },
   {
-    "objectID": "index.html#whitesides-outline-overview",
-    "href": "index.html#whitesides-outline-overview",
-    "title": "Ayman’s Test Presentation",
-    "section": "Whiteside’s Outline: Overview",
-    "text": "Whiteside’s Outline: Overview\n\n\nI’m not teaching you this, you gotta look through the documentation in the Randles Lab Documentation thingy"
+    "objectID": "index.html#color-your-data-by-id-and-threshold",
+    "href": "index.html#color-your-data-by-id-and-threshold",
+    "title": "Workshop Series, Randles Lab",
+    "section": "Color Your Data by ID and Threshold",
+    "text": "Color Your Data by ID and Threshold"
+  },
+  {
+    "objectID": "index.html#adjust-thresholding-to-show-only-fluid",
+    "href": "index.html#adjust-thresholding-to-show-only-fluid",
+    "title": "Workshop Series, Randles Lab",
+    "section": "Adjust Thresholding to Show Only Fluid",
+    "text": "Adjust Thresholding to Show Only Fluid"
+  },
+  {
+    "objectID": "index.html#restart-by-deleting-everything-but-data",
+    "href": "index.html#restart-by-deleting-everything-but-data",
+    "title": "Workshop Series, Randles Lab",
+    "section": "Restart by Deleting Everything but Data",
+    "text": "Restart by Deleting Everything but Data\n\n\nI want you guys to get comfortable with the workflow, so go ahead and delete everything but your data\nMake sure you pay attention to the Pipeline Browser and the different methods for deleting data\nOnce you are done, show me your screens"
+  },
+  {
+    "objectID": "index.html#convert-dataset-to-point-data",
+    "href": "index.html#convert-dataset-to-point-data",
+    "title": "Workshop Series, Randles Lab",
+    "section": "Convert dataset to “Point Data”",
+    "text": "Convert dataset to “Point Data”\n\n\nSome filters are only available for point-based datasets due to the structural differences between cell and point data\nCell data is defined by elements of a defined shape. The way we represent fluid data is by converting points to elements of the shape type Hexahedron. The fluid point is centered around this hexahedron\nPoint data is as you can imagine, with us defining each point individually. Points are connected via a “connectivity” array. Red blood cells/CTCs are made up of points and connectivities"
+  },
+  {
+    "objectID": "index.html#convert-to-point-data",
+    "href": "index.html#convert-to-point-data",
+    "title": "Workshop Series, Randles Lab",
+    "section": "Convert to Point Data",
+    "text": "Convert to Point Data"
+  },
+  {
+    "objectID": "index.html#create-streamlines-via-the-stream-tracer",
+    "href": "index.html#create-streamlines-via-the-stream-tracer",
+    "title": "Workshop Series, Randles Lab",
+    "section": "Create Streamlines via the Stream Tracer",
+    "text": "Create Streamlines via the Stream Tracer\n\nI’ll let you guys struggle with this one a little bit. I want you guys to get to the point you get a similar looking visualization."
+  },
+  {
+    "objectID": "index.html#apply-the-tube-filter-to-your-streamlines",
+    "href": "index.html#apply-the-tube-filter-to-your-streamlines",
+    "title": "Workshop Series, Randles Lab",
+    "section": "Apply the Tube Filter to your streamlines",
+    "text": "Apply the Tube Filter to your streamlines\n\n\n\nYour streamlines are very thin, so adding a shape-based filter can help make things clearer.\nI want you to again struggle a bit with this, adding a Tube filter.\nAdjust it to match these parameters"
+  },
+  {
+    "objectID": "index.html#add-glyphs-to-visualization-pipeline",
+    "href": "index.html#add-glyphs-to-visualization-pipeline",
+    "title": "Workshop Series, Randles Lab",
+    "section": "Add Glyphs to Visualization pipeline",
+    "text": "Add Glyphs to Visualization pipeline\n\nYou guessed it, I want you to struggle a bit more. Now add a Glpyh filter. Once you are done, you should get to a visualization similar to what I have above"
+  },
+  {
+    "objectID": "index.html#load-in-data-and-make-a-slice",
+    "href": "index.html#load-in-data-and-make-a-slice",
+    "title": "Workshop Series, Randles Lab",
+    "section": "Load in Data and Make a Slice",
+    "text": "Load in Data and Make a Slice\n\n\nFor this part, I’ll give you a little more freedom\nLoad in the data (mbt_for_tutorial.pvd) and make a slice of the data. Visualize only the slice\nFor reference, this is what my slice looks like"
+  },
+  {
+    "objectID": "index.html#animation-view",
+    "href": "index.html#animation-view",
+    "title": "Workshop Series, Randles Lab",
+    "section": "Animation View",
+    "text": "Animation View\n\nYou’ll see at the top of the ParaView application buttons that look familiar (a Play, Pause, Skip button)\nThese are used for animations. The data you loaded in is temporal/time series. If data is loaded in correctly, it enables you to play animations"
+  },
+  {
+    "objectID": "index.html#time-manager",
+    "href": "index.html#time-manager",
+    "title": "Workshop Series, Randles Lab",
+    "section": "Time Manager",
+    "text": "Time Manager\n\nIn newer versions of ParaView, there is no dedicated View for animations. It is now integrated into a new view called “Time Manager”\nOpening up the Time Manager view enables us more control over the temporal aspects of our dataset and change how we animate Things\nActually explaining how much you can do is out of the scope of this tutorial and my knowledge but you can explore on your own"
+  },
+  {
+    "objectID": "index.html#lets-make-an-animations",
+    "href": "index.html#lets-make-an-animations",
+    "title": "Workshop Series, Randles Lab",
+    "section": "Let’s Make an Animations",
+    "text": "Let’s Make an Animations\n\nWith your slice, try “Playing” the animation by pressing the play buttons\nWhat do you notice about the animation and the geometry?\nLet me know once you’ve guys have something playing. For bonus points that amount to nothing, try looping your animation and reversing It"
+  },
+  {
+    "objectID": "index.html#exporting-an-animation",
+    "href": "index.html#exporting-an-animation",
+    "title": "Workshop Series, Randles Lab",
+    "section": "Exporting an Animation",
+    "text": "Exporting an Animation\n\nOnce we want to actually see our animation as it was meant to, find the “Save Animation” option\nThere are a number of options/settings you can change. For now, just save it with a 1920 x 1080 ratio, at a frame rate of 10, and with the lowest level of compression"
+  },
+  {
+    "objectID": "index.html#what-else-can-we-do",
+    "href": "index.html#what-else-can-we-do",
+    "title": "Workshop Series, Randles Lab",
+    "section": "What Else Can we Do",
+    "text": "What Else Can we Do\n\nCamera Tracking\nAnimating pathlines, streamlines\nWho knows, not me"
+  },
+  {
+    "objectID": "index.html#paraview-python-scripting",
+    "href": "index.html#paraview-python-scripting",
+    "title": "Workshop Series, Randles Lab",
+    "section": "ParaView Python Scripting",
+    "text": "ParaView Python Scripting\n\npvPython\npvBatch"
+  },
+  {
+    "objectID": "index.html#ascentsensei",
+    "href": "index.html#ascentsensei",
+    "title": "Workshop Series, Randles Lab",
+    "section": "Ascent/SENSEI",
+    "text": "Ascent/SENSEI\n\nAscent is “an open source many-core capable lightweight in situ visualization and analysis infrastructure for multi-physics HPC simulations.”\nAscent has vaulted SENSEI to become the in situ infrastructure that the lab is to use. This is because its integration of VTK-m and consistent support from the developers\nSENSEI is “an open-source, generic in situ interface that allows parallel simulations or other data producers to code-couple to parallel third-party endpoints”\nIf using research_gpu, this branch still uses SENSEI due to the availability of SENSEI on the DCC. It allows similar functionality to Ascent but not as widespread adoption or integration into other existing APIs"
+  },
+  {
+    "objectID": "index.html#in-situ-visualization",
+    "href": "index.html#in-situ-visualization",
+    "title": "Workshop Series, Randles Lab",
+    "section": "In Situ Visualization",
+    "text": "In Situ Visualization\n\nIn situ, or “in place”, visualization is visualization at the time of simulation rather than post hoc or after the fact\nThe idea behind in situ visualization is that understanding the dynamics/progression of a simulation can not only be more useful but can be cost-saving, using already occupied resources/memory\nDifferent flavors of in situ analysis exists:\n\nIn-line/blocking\nIn transit\nHybrid\n\nIf you’re interested: https://cdux.cs.uoregon.edu/pubs/ChildsIJHPCA.pdf"
+  },
+  {
+    "objectID": "index.html#in-situ-visualization-within-harvey",
+    "href": "index.html#in-situ-visualization-within-harvey",
+    "title": "Workshop Series, Randles Lab",
+    "section": "In Situ Visualization within HARVEY",
+    "text": "In Situ Visualization within HARVEY\n\nI’ve instrumented in situ analysis using both Ascent and SENSEI in different branches of HARVEY to use\nThe research_gpu branch contains the version using SENSEI\nThe harveycuda_ascent branch contains the version using Ascent\nTo learn more about how to perform in situ visualization, I’ll be uploading the tutorial on vis later today (hopefully)"
+  },
+  {
+    "objectID": "index.html#connecting-ascentsensei-to-paraview",
+    "href": "index.html#connecting-ascentsensei-to-paraview",
+    "title": "Workshop Series, Randles Lab",
+    "section": "Connecting Ascent/SENSEI to ParaView",
+    "text": "Connecting Ascent/SENSEI to ParaView\n\nBoth Ascent and SENSEI allow users to perform visualization within ParaView, which means we have to the ability to perform similar visualization routines we normally would post hoc\nDoes require a priori knowledge of what/where you want to visualize, at least for now"
   }
 ]

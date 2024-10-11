@@ -4,6 +4,7 @@ format:
     title-block-style: none
     slide-number: c
     title-slide-style: default
+    incremental: true #do later
     chalkboard:
       buttons: false
     auto-animate: true
@@ -38,8 +39,8 @@ format:
 # {.title-slide .centeredslide background-video="https://web.cels.anl.gov/projects/alcf_vis_internal/HARVEY/sc23_arteries_sunspot_25fps_01.mp4" background-video-loop="true" loading="lazy"}
 
 ::: {style="background-color: rgba(22,22,22,0.75); border-radius: 10px; text-align:center; padding: 0px; padding-left: 1.5em; padding-right: 1.5em; max-width: min-content; min-width: max-content; margin-left: auto; margin-right: auto; padding-top: 0.2em; padding-bottom: 0.2em; line-height: 1.5em!important;"}
-<span style="color:#939393; font-size:1.5em; font-weight: bold;">Workshop 1: Introduction to the Randles Lab</span>  
-<span style="color:#777777; font-size:1.2em; font-weight: bold;">Getting started with our different tools</span>  
+<span style="color:#939393; font-size:1.5em; font-weight: bold;">Workshop 6: Visualization</span>  
+<span style="color:#777777; font-size:1.2em; font-weight: bold;">How to make your work look beautiful</span>  
 [<br>&nbsp;]{style="padding-bottom: 0.5rem;"}  
 [{{< fa solid home >}}](https://aymanzyy.github.io) Ayman Yousef 
 :::
@@ -51,487 +52,570 @@ format:
 # Overview
 
 1. [Background](#background)
-    - [Why Do We Care](#wecare)
-2. [Documentation](#documentation)
-    - [Wiki](#wiki)
-    - [Box](#box)
-    - [Outlook](#outlook)
-3. [Monday.com](#monday)
-4. [Overleaf](#overleaf)
-5. [Whiteside's](#whitesides)
+    - [What's Out There](#wecare)
+2. [Types of Visualization](#documentation)
+    - [Post Hoc](#wiki)
+    - [In Situ](#box)
+    - [Python-based](#outlook)
+3. [ParaView Overview](#overview)
+4. [ParaView Usage](#usage)
+5. [ParaView Filters](#filters)
+6. [ParaView Walkthrough](#walkthrough)
+7. [ParaView Animations](#animations)
+
 
 
 # Background {#background .centeredslide}
 
 :::: {.columns}
 
-::: {.column width="50%"}
+::: {.fragment .fade-in-then-out-out}
+- As someone who has been entrenched in visualization, it's hard to overstate the **importance** of vis.
 
-::: {.callout-note title="Goal" style="text-align:left;!important"}
-Get you guys caught up on the different resources available in the lab. 
-:::
-
-- It's **important** to note that the expectation is to keep up with each of these resources.
-
-- <span style="color:#ff8281;">Ex</span>: Monday pages are checked at random and during project meetings
-
-:::
-
-::: {.column width="49%"}
-![](https://images.ctfassets.net/xz1dnu24egyd/3FbNmZRES38q2Sk2EcoT7a/a290dc207a67cf779fc7c2456b177e9f/press-kit-icon.svg){width=25%}
-![](https://images.ctfassets.net/nrgyaltdicpt/lrfSTdfvhXxtaEcldEGV0/6932002ad80fc61ef60c01c7e09c8e79/overleaf-logo-white.svg){width=50%}
-![](https://seeklogo.com/images/C/confluence-logo-D9B07137C2-seeklogo.com.png){width=30%}
-![](https://monday.com/p/wp-content/uploads/2024/03/Logo-1-NO-1.png){width=50%}
-:::
-
-::::
-
-You are not expected to be experts by the end of this, but familiarty with each of these is  <span style="color:#9c90fa;">expected</span>. 
-
-# Why Do We Care {#wecare .centeredslide}
-
-:::: {.columns}
-
-::: {.column width="50%"}
-
- - Reproducibility is one of the most important aspets of research
- - Key tenant of the Randles Lab, you will be involved in multiple projects
-
-::: {.callout-warning title="Warning!"}
-- Your focus will be diverted on a day-to-day basis. Good to make notes for both yourself and fellow lab members
-:::
-
-- Collaboration is a key aspect of our research. Courteous to keep good notes so others can easily replicate your work
-  - <span style="color:#ff8281;">Ex</span>:  Getting hit by a bus
-
-
-:::
-
-::: {.column width="49%"}
-
-- Learning these tools are important in sustaining a collaborative lab environment. 
-  - If we're all comfortable with the same tools, it becomes easier pass of tasks, share work, etc. 
-
-:::
-
-::::
-
-# Documentation {#documentation .centeredslide}
-
-- Wiki (Confluence)
-
-- Box 
-
-- Outlook
-
-# Wiki (Confluence) {#wiki .centeredslide}
-:::: {.columns}
-
-::: {.column width="50%"}
-
- - Website that houses most of our documentation
- - Project updates are written here, with everyone in the lab having access to every page
-
-- Structure:
-  - Each project has a "landing page" and a "notebook"
-  - Notebooks contain information regarding the ongoing project it's for
-
-:::
-
-::: {.column width="49%"}
-![](https://i.gyazo.com/66b9f922cf03aa041292ca4012058ac0.pngg){width=90%}
-
-![](https://i.gyazo.com/48c5538a154172f98d505c8877f67df5.png){width=90%}
-:::
-
-::::
-
-## Wiki: Sample Entry {.centeredslide}
-:::: {.columns}
-
-::: {.column width="50%"}
-
- - Date: 
-    - Can be days when work was performed or when journal entry is recorded
-- Summary: 
-  - Include context for what work you're performing. 
-  - Can be conversational, some of the best notebooks work through 
-  the thinking process that led to a specific run, solution, etc. 
-
-:::
-
-::: {.column width="49%" style="font-size:0.59em;"}
-
-::: {.callout title="Algorithm"}
-
-1. `Date`: 
-
-2. `Goal`: 
-    - Intended purpose of run, should match surrounding Wiki entry
-
-3. `Input File`:
-    - Ideally, link the actual file
-    - If you're lazy, data path
-
-4. `Path to data output`: 
-
-5. `Code Version - git checkout`: 
-    - Link to branch
-    - Write commit hash
-
-6. `Job Submission Parameters`: 
-    - Number of processors
-    - Relevant job parameters
-      - Partition
-      - Node numbers
-      - Flags
-
-7. `Outcome/Post Processing`: 
-    - Link scripts
-    - Explain your workflow
-:::
-
-
-:::
-
-::::
-
-## Wiki: Example Entry {.centeredslide}
-
-![](https://i.gyazo.com/4315a92dce655ed54b035eedf5dc1909.png){height=150%}
-
-# Box {#box .centeredslide}
-:::: {.columns}
-
-::: {.column width="50%"}
-
- - Website that houses the rest of our documentation
- - Files to be shared with the lab, Professor Randles are housed here
-    - Group Presentations
-    - Individual meeting files
-    - Milestone documents
- - Unlimited lab storage but Duke also gives individuals their own allocation of storage
-
-::: {.callout-warning title="Warning!"}
-- DO NOT UPLOAD UNNECESSARY FILES
-:::
-:::
-
-::: {.column width="49%"}
-![](https://upload.wikimedia.org/wikipedia/commons/5/57/Box%2C_Inc._logo.svg){width=75%}
-![](https://i.gyazo.com/22547996db9d716c894e64cc8dcbe815.png){height=150%}
-
-:::
-
-::::
-
-# Outlook {#outlook .centeredslide}
-:::: {.columns}
-
-::: {.column width="50%"}
-
- - We use Outlook calendar to organize our lab schedule. This includes:
-    - Meetings
-    - Lab Activities
-    - Milestone Events
-    - Time Off
-
-
-
-::: {.callout-important title="Warning" style="text-align:left;"}
-**Professor Randles lives by her calendar. If it's not on her calendar, it's not happening**:
-:::
-:::
-
-::: {.column width="49%"}
-![](https://mailmeteor.com/logos/assets/PNG/Microsoft_Office_Outlook_Logo_256px.png){width=75%}
-:::
-::::
-
-## Outlook Overview {.centeredslide}
-
-![](https://i.gyazo.com/cadbca20725120ffc1d68cb6b99d30b2.png){width=75%}
-
-## Outlook Day-to-Day {.centeredslide}
-
-![](https://i.gyazo.com/cbc94a3f77ad59c3389870a39233c23a.png){width=75%}
-
-# Monday.com {#monday .centeredslide}
-:::: {.columns}
-
-::: {.column width="50%"}
-
- - Monday.com Ltd. is a cloud-based platform that allows users to create their own applications and project management software. 
- - It is used to schedule/assign tasks, track project progress, etc. 
-
-::: {.callout-warning title="Warning!"}
-- DO NOT UPLOAD UNNECESSARY FILES
-- DO NOT UPLOAD PATIENT DATA
-:::
-:::
-
-::: {.column width="49%"}
-![](https://thedigitalprojectmanager.com/wp-content/uploads/2021/04/In-depth-review-–-Monday.com-featured-image.png){width=75%}
-
-:::
-::::
-
-## Monday.com: My Work Page {.centeredslide}
-
-![](https://thedigitalprojectmanager.com/wp-content/uploads/2021/04/In-depth-review-–-Monday.com-featured-image.png){width=75%}
-
-## Monday.com: Project Page {.centeredslide}
-
-![](https://thedigitalprojectmanager.com/wp-content/uploads/2021/04/In-depth-review-–-Monday.com-featured-image.png){width=75%}
-
-## Monday.com: Research Subgroup Page {.centeredslide}
-
-![](https://thedigitalprojectmanager.com/wp-content/uploads/2021/04/In-depth-review-–-Monday.com-featured-image.png){width=75%}
-
-
-# Overleaf {#overleaf .centeredslide}
-:::: {.columns}
-
-::: {.column width="50%"}
-
-- Overleaf "is a collaborative cloud-based LaTeX editor used for writing, editing and publishing scientific documents".
-- All papers, outlines, milestone documents, and some of our documentation is written with Overleaf. Easily shareable and great for bookkeeping
-
-::: {.callout-tip title="Learning Overleaf!"}
-- Learning LaTeX while your research expectations are lower is a good idea, trust me
-:::
-:::
-
-::: {.column width="49%"}
-
-<iframe data-src="https://cdn.dribbble.com/users/95028/screenshots/2256537/overleaf-logo2.gif" width="100%" height="800" title="l2hmc-qcd"></iframe>
-
-
-:::
-::::
-
-## Overleaf: LaTeX {.centeredslide}
-:::: {.columns}
-
-- LATEX is a tool for typesetting professional-looking documents
-- LaTeX works very differently: instead of a interactive page to type and edit text with, your document is a plain text file interspersed with LaTeX commands used to express the desired (typeset) results.
-- To produce a visible, typeset document, your LaTeX file is processed by a piece of software called a TeX engine which uses the commands embedded in your text file to guide and control the typesetting process, converting the LaTeX commands and document text into a professionally typeset PDF file
-
-::::
-
-## Overleaf: Writing your first piece of LATEX {.centeredslide}
-
-- Creating a document and writing some text 
-  -
-```
-\documentclass{article}
-\begin{document}
-First document. This is a simple example, with no 
-extra parameters or packages included.
-\end{document}
-```
-  - Will produce the following image 
-    - ![](https://images.ctfassets.net/nrgyaltdicpt/5oBbZABsWEnHZpwhfvV2PD/95ba7d5496616b4f10dffe6fb90f578a/LL30Fig1-plain.svg){width=75%}
+  - <span style="color:#7b5e7b;">Ex</span>: Discovery, offering a different representation and perspective
   
-- Not always this easy. Some journals/conferences require specific formats 
+  - <span style="color:#b9f18c;">Ex</span>: Better disseminate your research amongst peers and general audiences
 
+  - <span style="color:#1c0221;">Ex</span>: Tool for debugging/error-handling 
 
-## Overleaf: Document Pre-amble {.centeredslide}
-:::: {.columns}
-
-::: {.column width="48%"}
-- Everything in your .tex file appearing before \begin document is called the preamble, which acts as the document’s “setup” section.
-
-::: {.callout-tip title="Document Settings"}
-```
-\documentclass[12pt, letterpaper]{article}
-\usepackage{graphicx}
-
-```
 :::
 
-- In this example, we are setting both:
-  - The font size to 12 pt
-  - The paper size to letterpaper
+::: {.fragment .fade-in-then-out-out}
+Visualization is often passed off as a less important tool in your arsenal, but it can just as effective as traditional analysis routines <span style="color:#9c90fa;">expected</span>. 
 
-::: 
-::: {.column width="49%"}
-
-
-- Overleaf is compatible with a bunch of different libraries, packages that you can use to your advantage. To do so, you'd want to include something like the following: 
-
-::: {.callout-tip title="Package Import"}
-```
-\usepackage{graphicx}
-
-```
-::: 
-- For more info on what packages are available and their functionality, you can visit the following [page](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes#Finding_and_using_LaTeX_packages) 
-
-
-::: 
-::::
-
-## Overleaf: Including title, author and date information {.centeredslide}
-:::: {.columns}
-
-- Adding a title, author and date to our document requires three more lines in the preamble (not the main body of the document). Those lines are:
-
-::: {.callout-tip title="Author/Date Information"}
-```
-\title{My first LaTeX document}: 
-\author{Hubert Farnsworth}: 
-
-\thanks{Funded by the Overleaf team.}: 
-
-\date{August 2022}: 
-```
-::: 
-
-::::
-
-## Overleaf: Adding comments {.centeredslide}
-:::: {.columns}
-
-To make a comment in LATEX, simply write a % symbol at the beginning of the line, as shown in the following code which uses the example above:
-
-::: {.callout-tip title="Example Comment Line"}
-```
-% This line here is a comment. It will not be typeset in the document.
-
-```
-:::
-
-::::
-
-## Overleaf: Bold, italics and underlining {.centeredslide}
-:::: {.columns}
-
-- **Bold** : bold text in LaTeX is typeset using the \textbf{...} command.
-- *Italics* : italicised text is produced using the \textit{...} command.
-- <ins>Underline</ins>: to underline text use the \underline{...} command.
-
-::: {.callout-tip title="Example Usage Line"}  
-```
-Some of the \textbf{greatest}
-discoveries in \underline{science} 
-were made by \textbf{\textit{accident}}.
-```
-:::
-
-::::
-
-## Overleaf: Adding Images {.centeredslide}
-:::: {.columns}
-
-Overleaf supports three ways to insert images:
-
-::: {.column width="49%"}
-
-
-- Use the Insert Figure button, located on the editor toolbar, to insert an image into Visual Editor or Code Editor.
-- Copy and paste an image into Visual Editor or Code Editor.
-- Use Code Editor to write LaTeX code that inserts a graphic.
-​
-:::
-
-::: {.column width="49%"}
-
-::: {.callout-tip title="Example of Image Inclusion"}  
-
-```
-\documentclass{article}
-\usepackage{graphicx} %LaTeX package to import graphics
-\graphicspath{{images/}} %configuring the graphicx package
- 
-\begin{document}
-The universe is immense and it seems to be homogeneous, 
-on a large scale, everywhere we look.
-
-% The \includegraphcs command is 
-% provided (implemented) by the 
-% graphicx package
-\includegraphics{universe}  
- 
-There's a picture of a galaxy above.
-\end{document}
-```
-:::
 :::
 ::::
 
-## {auto-animate="true"}
 
-```r
-\documentclass{article}
-\usepackage{graphicx} %LaTeX package to import graphics
-\graphicspath{{images/}} %configuring the graphicx package
+# Discovery {#discovery .centeredslide}
+::: {.fragment .fade-in-then-out-out}
+![](assets/in_the_thick_of_it_blue_orange_inverted copy.jpeg){width=90%}
+:::
+# Dessimination {#dessi .centeredslide}
+::: {.fragment .fade-in-then-out-out}
+![](assets/split_up_geom_copy.jpg){width=90%}
+:::
+# Debugging {#debugging .centeredslide}
+::: {.fragment .fade-in-then-out-out}
+![](assets/wtf.jpg){width=90%}
+:::
+# What's Out There? {#wecare .centeredslide}
 
-```
-
-## {auto-animate=true}
-
-```r
-\documentclass{article}
-\usepackage{graphicx} %LaTeX package to import graphics
-\graphicspath{{images/}} %configuring the graphicx package
- 
-\begin{document}
-The universe is immense and it seems to be homogeneous, 
-on a large scale, everywhere we look.
-
-```
-
-## Overleaf: Captions, labels, references {.centeredslide}
-:::: {.columns}
-```
-\documentclass{article}
-\usepackage{graphicx}
-\graphicspath{{images/}}
- 
-\begin{document}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.75\textwidth]{mesh}
-    \caption{A nice plot.}
-    \label{fig:mesh1}
-\end{figure}
- 
-As you can see in figure \ref{fig:mesh1}, the function grows near the origin. This example is on page \pageref{fig:mesh1}.
-
-\end{document}
-```
-::::
-## Overleaf: Link Sharing {.centeredslide}
-
-<iframe data-src="https://images.contentful.com/nrgyaltdicpt/20neyIS8962IgXcQH6beDo/2dd30bbb1ca0325a55fecb93666aa98d/ProjectSharing.gif" width="90%" height="500" title="l2hmc-qcd"></iframe>
-
-## Overleaf: More to Learn {.centeredslide}
-:::: {.columns}
-
-::::
-
-
-# Whiteside's Outline {.centeredslide}
 :::: {.columns}
 
 ::: {.column width="50%"}
 
-- Based on a paper by Harvard Professor/American chemist George Whiteside
-- Idea behind his work on papers was that "it is most efficient to write papers from outlines"
+::: {.fragment .fade-in-then-out-out}
+ - ParaView
+ - Visit 
+ - NVIDIA Omniverse
+ - Python-based Visualization
+:::
+
+::: {.fragment .fade-in-then-out-out}
+::: {.callout-important title="What should I use"}
+- Most of our lab is proficient in ParaView, so I suggest getting good at it over more obscure vis APIs
+:::
+:::
+
 
 :::
 
 ::: {.column width="49%"}
-![](https://media.sciencephoto.com/image/c0068504/800wm){width=75%}
 
+![](https://www.paraview.org/wp-content/uploads/2022/10/paraview.png){width=60%}
+:::
+
+::::
+
+## Types of Visualization { .centeredslide}
+:::: {.columns}
+
+::: {.column width="50%"}
+
+::: {.fragment .fade-in-then-out-out}
+- Post Hoc Visualization
+  - Save data to disk/storage
+  - Loaded in to visualization API
+  - Save images, plots to disk
+
+- In Situ
+  - Data remains in memory
+  - Data is passed to visualization API
+  - Save images, plots to disk
+
+- Notebook visualization
+  - Load data in to Jupyter notebook
+  - Utilize vis modules
+    - Matplotlib
+    - Etc. 
+:::
+:::
+
+
+::: {.column width="49%"}
+
+::: {.fragment .fade-in-then-out-out}
+![](assets/streamlines_with_specular.png){width=75%}
+![](assets/cell_python_vis.png){width=75%}
+:::
 
 :::
 ::::
-
-## Whiteside's Outline: Overview {.centeredslide}
+# ParaView (Kitware) {#paraview .centeredslide}
 :::: {.columns}
-- I'm not teaching you this, you gotta look through the documentation in the Randles Lab Documentation thingy
+
+::: {.column width="50%"}
+
+ - An open-source (BSD 3 Clause License), scalable, multi-platform visualization application based on VTK
+ - Support **parallelism**, extreme-scale visualization
+
+- Utilities:
+  - CPU - VTK
+  - GPU - VTKm
+
+
+:::
+
+::: {.column width="49%"}
+![](https://www.paraview.org/Wiki/images/e/e1/ParaView_UsersGuide_ParaViewLogo.png){width=90%}
+
+![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWQmrTHNB0ZhJBb9eRmAOurSGDASATPedvmQ&s){width=90%}
+:::
+
 ::::
 
+## ParaView - Portability {.centeredslide}
+:::: {.columns}
+
+::: {.column width="50%"}
+
+- On the Desktop: 
+  - Post hoc analysis
+  - Most common method
+  - Best for small scale data
+- On the Web:
+  - Trame
+  - VTK.js
+  - ParaView Glance/Visualizer/Lite
+- Remote Work: 
+  - Remotely connect to servers
+  - Ex: Polaris, Cooley
+
+:::
+::: {.column width="49%" style="font-size:0.59em;"}
+![](https://www.kitware.com/main/wp-content/uploads/2017/10/paraviewweb-visualizer-e1509379710554-2048x1320.png){width=90%}
+
+![](https://www.kitware.com/main/wp-content/uploads/2022/09/sc2022-trame.png){width=40%}
+:::
+
+::::
+
+## ParaView - Building Blocks {.centeredslide}
+
+- ParaView utilizes the VTK (the Visualization Toolkit) model as its backbone for data representation
+
+- Data is transformed through algorithms, present in ParaView as Filters & Sinks (not common)
+
+![](https://docs.paraview.org/en/v5.9.1/_images/VTKPipeline.png){width=90%}
+
+
+## ParaView - VTK Data Model {.centeredslide}
+
+![](https://i.gyazo.com/c898a380aaa5605ba78733fb42ab8f18.jpg){width=90%}
+
+# ParaView Usage {#usage .centeredslide}
+:::: {.columns}
+
+Let's go through the basics
+
+:::: 
+
+## Toolbar {.centeredslide}
+:::: {.columns}
+
+![](https://gyazo.com/54f8ee7c0ce9794e11e7a476a5713db4){width=100%}
+
+ - Houses icons for most of the tools, filters, features etc. that users use
+ - Some of the most frequently used are:
+    - Reset Session
+    - Import File/Open
+    - Toggle Color Bar
+ - Alternatively, you can also just find all of these by moving your mouse to the top of your computer and scrolling through 
+::::
+
+## Pipeline Browser {.centeredslide}
+:::: {.columns}
+::: {.column width="49%"}
+![](https://gyazo.com/e088acc56246b525fba02c8cbf17451c)
+:::
+
+::: {.column width="49%"}
+- ParaView handles different objects and filters via a pipeline.
+- Pipelines allow users to build off existing objects and filters to continuously create new ones
+- Things shown in the pipeline browser include:
+  - Sources (Data)
+  - Filters (Data Manipulation)
+  - Readers
+  - Extractors 
+- The pipeline browser indiciates data objects and their individual structures/pipelines
+  - Filters are formatted with an indentation to mark they are of a pipeline 
+:::
+::::
+
+
+## Properties Browser {.centeredslide}
+:::: {.columns}
+
+::: {.column width="50%"}
+- Each object has its own properties that can be updated
+- The editable properties depend on the object type but a few of the standard ones include: 
+  - Representation
+    - Points
+    - Surface
+    - Volume
+  - Coloring
+    - Parameter to Color BY
+    - Color Bar 
+  - Styling/Lighting
+    - Opacity
+    - Specular
+  - Background
+:::
+
+::: {.column width="49%"}
+![](https://gyazo.com/c237a258c3f96b007220e929b495d4ee)
+:::
+
+
+::::
+
+## Camera Controls {.centeredslide}
+:::: {.columns}
+
+![](https://i.gyazo.com/0045b49903efd9c91dcbdba04f3649f3.png)
+
+- To interact with an object, you can use the camera controls
+- Controls include:  
+  - Zoom To Box
+  - Set View Direction To (+X,+Y,+Z) and (-X, -Y, -Z)
+  - Rotate Clockwise and Counterclockwise
+  - Zoom to Data
+  - Reset
+
+::::
+
+## Some Smaller Things {.centeredslide}
+:::: {.columns}
+
+![](https://gyazo.com/04fe2275761b18f8061faad898fa75ab)
+
+- Auto Apply, I recommend having it on
+- The color bar is highly configurable, explore with different color maps
+- 
+
+::::
+
+# ParaView: Filters {#filters .centeredslide}
+:::: {.columns}
+
+::: {.column width="50%"}
+
+- "Filters are functional units that process the data to generate, extract, or derive features from the data."
+
+- Filters can be applied to sources (data imported) or even other filters to further modify an object. You can see the data flow in your Pipeline Browser
+
+- Common Filters:
+  - Slice
+  - Clip
+  - Threshold
+  - Glyph
+  - Stream Tracer
+:::
+
+::: {.column width="49%"}
+![](https://gyazo.com/0d062b1dac22b10e6834a2047b8821fe){width=75%}
+:::
+::::
+
+## Clip/Slice {.centeredslide}
+:::: {.columns}
+
+::: {.column width="50%"}
+- Clip is used to extract a portion of an object defined by a plane/shape
+  - Ex: Remove left-hand portion of a cube 
+  - Ex: Remove all elements to the right of a plane in order to see what's "inside"
+
+- Slice is used to extract a specific plane
+  - Ex: Extract fluid fields at the centerline/axial position to inform of hemodynamic metrics there
+  - Ex: 2D Flow Field Contouring 
+:::
+
+::: {.column width="49%"}
+![](assets/clip_sphere_4k_0.png)
+![](assets/test_longer_mbt_ani.avi)
+:::
+
+::::
+## Threshold {.centeredslide}
+:::: {.columns}
+
+
+::: {.column width="50%"}
+
+::: {layout-nrow=2}
+![Full Cube](https://i.gyazo.com/fd200dd8627dfc023a6b05a86d97e5a7.png){width=40%}
+![Fluid Points Only](https://gyazo.com/b1e7462bd23dd09fa2d90af499c46965){width=42%}
+![Inlet Points Only](https://gyazo.com/b549732bc1d559af866b41a1721d8c09){width=50%}
+:::
+
+:::
+::: {.column width="50%"}
+- Thresholding is used to extract specific cells that fall within a predefined range
+  - Ex: Remove all xlet points
+  - Ex: Remove all cells of a specific ID
+- Highly configurable and criminally underutilized
+- Believe you can only threshold based on "Cell Data"
+:::
+
+
+::::
+## Glyph {.centeredslide}
+:::: {.columns}
+
+::: {.column width="50%"}
+- Glyph is used to replace point data with a predefined shape or glpyh.
+  - The glyphs may be oriented by a vector and scaled by a vector or scalar.
+  - Useful for both visualization and analysis purposes
+- Preferrable when working with cell and fluid data 
+  - Ex: Wendy visualizing fluid flow around a cell
+  - Ex: Chris visualizing fluid flow around a bifurcation
+:::
+
+::: {.column width="49%"}
+![](https://gyazo.com/dca88a4c8078f40918644f4e75034896)
+:::
+
+::::
+
+
+## Stream Tracer {.centeredslide}
+:::: {.columns}
+
+- My favorite of all the filters, stream tracer takes point data and converts it 
+- Stream Tracer seeds a vector field with points and then traces those seed points through the vector field
+- The seeded points are configurable by either a line or a sphere with different resolutions (aka number of seeds) allowable
+- Again, very useful when working with both fluid and fluid + cell data
+
+::::
+
+## Stream Tracer Cont. {.centeredslide}
+:::: {.columns}
+![](assets/plinko_ctc_cell_pressure_infernomap.png)
+::::
+
+## Stream Tracer Cont. 2 {.centeredslide}
+:::: {.columns}
+![](assets/higher_quality_full_geom_cardiomems.jpeg)
+::::
+
+
+## How Do We Use Filters? {.centeredslide}
+::::{.columns}
+
+::: {.column width="50%"}
+- Let's try using a couple of filters with a provided example dataset. Make sure you've downloaded cube_ex.tar and unzip it 
+- We'll start off with creating:
+  - Clipping the cube
+  - Thresholding out all non-fluid points
+  - Creating a stream line visualization
+  - Create glyphs based on the streamline
+:::
+
+::::
+
+## Load The Dataset In {.centeredslide}
+::::{.columns}
+
+![](https://gyazo.com/17e376c2262982ebf571493f11fec7d9)
+
+::::
+
+## Add a Clip Filter {.centeredslide}
+:::: {.columns}
+
+![](https://gyazo.com/bcf4f258dc2ebece21f1afef9d02f4d3)
+
+::::
+
+## Add a Clip Filter Cont. {.centeredslide}
+:::: {.columns}
+
+![](https://gyazo.com/323b14cf74db4a830818c1a7b0704fa3)
+
+::::
+
+## Color Your Data by ID and Threshold {.centeredslide}
+:::: {.columns}
+
+![](https://gyazo.com/ee116ade5726bf7ad883f5eb4f9189e1)
+
+::::
+
+## Adjust Thresholding to Show Only Fluid {.centeredslide}
+:::: {.columns}
+
+![](https://gyazo.com/f3c6db7ee65e5bf9b021a36ac63675ef)
+
+::::
+
+## Restart by Deleting Everything but Data {.centeredslide}
+:::: {.columns}
+
+- I want you guys to get comfortable with the workflow, so go ahead and delete everything but your data 
+- Make sure you pay attention to the Pipeline Browser and the different methods for deleting data 
+- Once you are done, show me your screens 
+
+::::
+
+## Convert dataset to "Point Data" {.centeredslide}
+:::: {.columns}
+
+- Some filters are only available for point-based datasets due to the structural differences between cell and point data
+
+- Cell data is defined by elements of a defined shape. The way we represent fluid data is by converting points to elements of the shape type Hexahedron. The fluid point is centered around this hexahedron
+
+- Point data is as you can imagine, with us defining each point individually. Points are connected via a "connectivity" array. Red blood cells/CTCs are made up of points and connectivities
+::::
+
+## Convert to Point Data  {.centeredslide}
+:::: {.columns}
+
+![](https://gyazo.com/bb1af0dc3751f2de76da8f37a07655b9)
+
+::::
+
+
+## Create Streamlines via the Stream Tracer {.centeredslide}
+:::: {.columns}
+
+
+I'll let you guys struggle with this one a little bit. I want you guys to get to the point you get a similar looking visualization. 
+
+![](https://gyazo.com/fa5efe884820c382acd0395d7ff18a8d)
+
+::::
+
+## Apply the Tube Filter to your streamlines {.centeredslide}
+:::: {.columns}
+::: {.column width="49%"}
+- Your streamlines are very thin, so adding a shape-based filter can help make things clearer. 
+- I want you to again struggle a bit with this, adding a Tube filter. 
+- Adjust it to match these parameters
+:::
+
+::: {.column width="50%"}
+
+![](https://gyazo.com/d15796b6edf6a7cc95dbc87c4e705211)
+
+::: 
+::::
+
+## Add Glyphs to Visualization pipeline {.centeredslide}
+
+![](https://gyazo.com/719932ee4f8b8ea7f8d6653cc2483226)
+
+You guessed it, I want you to struggle a bit more. Now add a Glpyh filter. Once you are done, you should get to a visualization similar to what I have above
+
+# ParaView Animations {.centeredslide}
+
+![](assets/mbt_animation_for_tutorial_slower_magma.gif)
+
+## Load in Data and Make a Slice {.centeredslide}
+
+::: {.column width="50%"}
+- For this part, I'll give you a little more freedom
+- Load in the data (mbt_for_tutorial.pvd) and make a slice of the data. Visualize only the slice
+- For reference, this is what my slice looks like 
+:::
+
+::: {.column width="50%"}
+![](https://gyazo.com/e67ef5964cf8d76ce6fe797e59149579)
+:::
+## Animation View {.centeredslide}
+
+- You'll see at the top of the ParaView application buttons that look familiar (a Play, Pause, Skip button)
+- These are used for animations. The data you loaded in is temporal/time series. If data is loaded in correctly, it enables you to play animations
+
+![](https://gyazo.com/2ccb76d015c6eed6ac161fa0f9a9c8d1)
+
+## Time Manager {.centeredslide}
+
+- In newer versions of ParaView, there is no dedicated View for animations. It is now integrated into a new view called "Time Manager"
+
+- Opening up the Time Manager view enables us more control over the temporal aspects of our dataset and change how we animate Things
+
+- Actually explaining how much you can do is out of the scope of this tutorial and my knowledge but you can explore on your own
+
+![](https://i.gyazo.com/ba88509687f7a07689439164668d7022.png)
+
+## Let's Make an Animations {.centeredslide}
+
+- With your slice, try "Playing" the animation by pressing the play buttons
+
+- What do you notice about the animation and the geometry?
+
+- Let me know once you've guys have something playing. For bonus points that amount to nothing, try looping your animation and reversing It
+
+## Exporting an Animation {.centeredslide}
+
+- Once we want to actually see our animation as it was meant to, find the "Save Animation" option
+
+- There are a number of options/settings you can change. For now, just save it with a 1920 x 1080 ratio, at a frame rate of 10, and with the lowest level of compression
+
+![](https://gyazo.com/ca8f20e0f41a12a6fe8c6af88f43b0c2)
+
+## What Else Can we Do 
+
+- Camera Tracking
+- Animating pathlines, streamlines 
+- Who knows, not me
+
+# Differt Avenues for visualization
+
+## ParaView Python Scripting {.centeredslide}
+
+- pvPython
+- pvBatch
+
+## Ascent/SENSEI {.centeredslide}
+
+- Ascent is "an open source many-core capable lightweight in situ visualization and analysis infrastructure for multi-physics HPC simulations."
+- Ascent has vaulted SENSEI to become the in situ infrastructure that the lab is to use. This is because its integration of VTK-m and consistent support from the developers
+
+- SENSEI is "an open-source, generic in situ interface that allows parallel simulations or other data producers to code-couple to parallel third-party endpoints"
+- If using research_gpu, this branch still uses SENSEI due to the availability of SENSEI on the DCC. It allows similar functionality to Ascent but not as widespread adoption or integration into other existing APIs
+
+## In Situ Visualization {.centeredslide}
+
+- In situ, or "in place", visualization is visualization at the time of simulation rather than post hoc or after the fact 
+
+- The idea behind in situ visualization is that understanding the dynamics/progression of a simulation can not only be more useful but can be cost-saving, using already occupied resources/memory 
+
+- Different flavors of in situ analysis exists:
+  - In-line/blocking
+  - In transit
+  - Hybrid
+- If you're interested: <https://cdux.cs.uoregon.edu/pubs/ChildsIJHPCA.pdf>
+
+## In Situ Visualization within HARVEY {.centeredslide}
+
+- I've instrumented in situ analysis using both Ascent and SENSEI in different branches of HARVEY to use
+- The research_gpu branch contains the version using SENSEI
+- The harveycuda_ascent branch contains the version using Ascent
+- To learn more about how to perform in situ visualization, I'll be uploading the tutorial on vis later today (hopefully)
+
+## Connecting Ascent/SENSEI to ParaView {.centeredslide}
+
+- Both Ascent and SENSEI allow users to perform visualization within ParaView, which means we have to the ability to perform similar visualization routines we normally would post hoc
+- Does require a priori knowledge of what/where you want to visualize, at least for now

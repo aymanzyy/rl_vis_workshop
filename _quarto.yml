@@ -4,7 +4,7 @@ project:
   preview:
     port: 4204
 
-title: "Ayman's Test Presentation"
+title: "Workshop Series, Randles Lab"
 date: today
 date-modified: last-modified
 author-title: ""
@@ -32,20 +32,6 @@ citation:
    url: https://saforem2.github.io/lattice23
    abstract: | 
      A little workshop on different resources within the Randles Lab.
-  # -----------------------
-  # type: article-journal
-  # container-title: ACM Transactions on Embedded Computing Systems
-  # volume: 21
-  # issue: 2
-  # issued: 2022-03
-  # issn: 1539-9087
-  # doi: 10.1145/3514174
-  # -----------------------
-  # type: speech
-  # container-title: "Journal of Data Science Software"
-  # doi: "10.23915/reprodocs.00010"
-  # url: https://example.com/summarizing-output
-  # -----------------------
 google-scholar: true
 google-analytics: G-XVM2Y822Y1
 
